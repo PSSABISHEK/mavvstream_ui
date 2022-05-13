@@ -1,0 +1,84 @@
+[
+{
+    "tableName": "Erb_Direction_yolo",
+    "streamURI": "../../Test/Erb_direction_yolo.txt",
+    "fields": [
+      [
+        "Erb_Direction_yolo.FrameId",
+        "number(long)",
+        "0"
+      ],
+      [
+        "Erb_Direction_yolo.ObjectId",
+        "number(long)",
+        "1"
+      ],
+      [
+        "Erb_Direction_yolo.ObjectLabel",
+        "number(long)",
+        "2"
+      ],
+      [
+        "Erb_Direction_yolo.BB",
+        "vector number(double) []",
+        "3"
+      ],
+      [
+        "Erb_Direction_yolo.FV",
+        "vector number(double) [][]",
+        "4"
+      ],
+	[
+        "Erb_Direction_yolo.tbSourceTS",
+        "number(long)",
+        "5"
+      ],
+      [
+        "Erb_Direction_yolo.tbSystemTS",
+        "number(long)",
+        "6"
+      ]
+    ]
+  },
+{
+    "tableName": "Erb_BackPackRemove_yolo",
+    "streamURI": "../../Test/Erb_BackPackRemove.txt",
+    "fields": [
+      [
+        "Erb_BackPackRemove.FrameId",
+        "number(long)",
+        "0"
+      ],
+      [
+        "Erb_BackPackRemove.ObjectId",
+        "number(long)",
+        "1"
+      ],
+      [
+        "Erb_BackPackRemove.ObjectLabel",
+        "number(long)",
+        "2"
+      ],
+      [
+        "Erb_BackPackRemove.BB",
+        "vector number(double) []",
+        "3"
+      ],
+      [
+        "Erb_BackPackRemove.FV",
+        "vector number(double) [][]",
+        "4"
+      ],
+	[
+        "Erb_BackPackRemove.tbSourceTS",
+        "number(long)",
+        "5"
+      ],
+      [
+        "Erb_BackPackRemove.tbSystemTS",
+        "number(long)",
+        "6"
+      ]
+    ]
+  }
+]

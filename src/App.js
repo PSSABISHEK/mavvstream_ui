@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { Button, Col, Container, Form, FormControl, Row } from 'react-bootstrap';
+import NavbarBefore from './Components/NavbarBefore';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css'
+
+import "bootstrap/dist/css/bootstrap.css";
+import QueryTemplate from './Components/QueryTemplate';
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+  state = { 
+    queryArray: []
+  }
+
+  handleAddQuery = () => {
+    this.setState({
+      queryArray: [...this.state.queryArray, <QueryTemplate/>]
+    })
+  }
+
+  render() { 
+    return ( 
+      <div>
+        <NavbarBefore/>
+        <Container className="main-div">
+          <Button onClick={this.handleAddQuery}>Add</Button>
+        </Container>
+        {this.state.queryArray.map((item, i) => (item))}
+      </div>
+    );
+  }
 }
-
+ 
 export default App;
