@@ -1,0 +1,31 @@
+<ClientQuery>
+  <ContinuousQuery name="testQuery" startTime="0" endTime="10000" hopSizeLB="0" hopSizeUB="60" initialWindowSize="60" scheduleStrategy="RoundRobinSS" timeToRunQuery="null" tolerance="10">
+    <QOS type="latency" unit="ms" numOfValues="1.0" errorRate="10"> <!-- TYPE = LATENCY, MEMORY and THROUGHPUT-->
+      <Tuple value="1,0.01"/>
+    </QOS>
+    <QOS type="memory" unit="ms" numOfValues="1.0" errorRate="10">
+      <Tuple value="1,0.2"/>
+    </QOS>
+    <QOS type="throughput" unit="ms" numOfValues="1.0" errorRate="10">
+      <Tuple value="1,0.3"/>
+    </QOS>
+    <Order-By class="Project" name="project_1" id="3" attributes="Erb_Direction_yolo.FrameId, Erb_Direction_yolo.ObjectId"> <!-- OPERATOR AND ATTRB INPUT -->
+      <Select name="select1" id="1" conditionString="Erb_Direction_yolo.ObjectId == &apos;1&apos;"> <!-- OPERATOR AND CONDITION INPUT -->
+        <edu.uta.dsms.core.query.CQ__Arrable name="arrable1" id="7">
+          <Stream name="Erb_Direction_yolo" id="1">
+            <logicalName>Erb_Direction_yolo</logicalName> <!-- STREAM NAME - VARIABLE-->
+          </Stream>
+          <gba>Erb_Direction_yolo.ObjectId</gba> <!-- VARIABLE -->
+          <aoa>Erb_Direction_yolo.FrameId</aoa> <!-- VARIABLE -->
+        </edu.uta.dsms.core.query.CQ__Arrable>
+      </Select>
+    </Order-By>
+  </ContinuousQuery>
+</ClientQuery>
+
+<!-- STREAM -> ARRABLE -> SELECT -> ORDER-BY (PROJECT)-->
+
+<!--
+  META DATA
+
+-->
